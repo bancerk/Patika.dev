@@ -4,22 +4,33 @@ import java.util.Scanner;
 
 public class Main {
 
-    Scanner scanner = new Scanner(System.in);
-    
-    
+    public static void main(String[] args) {
 
-    int a = scanner.nextInt();
-    int b = scanner.nextInt();
-    int c = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("a sayısını girin: ");
+        int a = scanner.nextInt();
+        System.out.println("b sayısını girin: ");
+        int b = scanner.nextInt();
+        System.out.println("c sayısını girin: ");
+        int c = scanner.nextInt();
+
+        System.out.println("İşlem sonucu: " + (a+b*c-b));
+
+    }
 
 
 }
 
 
 /*
-Soru: Kullanıcıdan 3 tane sayı (a, b, c) alıp bu sayıları işlem sırasına göre işleyen bir program yazın. İşlem sırası şöyle olsun: a+b*c-b. İşlem tamamladıktan sonra sonucu ekrana yazdırın.
+Soru: Kullanıcıdan 3 tane sayı (a, b, c) alıp bu sayıları işlem sırasına göre işleyen bir program yazın.
 
-Örnek: Kullanıcıdan alınan sayılar 10, 2 ve 3 olsun. Yapılacak işlem ise 10+2*3-2 şeklinde olsun. İşlemleri kullanıcı girmeyecek olup kodunuzda yazmış olmalısınız. 
+İşlem sırası şöyle olsun: a+b*c-b. İşlem tamamladıktan sonra sonucu ekrana yazdırın.
+
+Örnek: Kullanıcıdan alınan sayılar 10, 2 ve 3 olsun. Yapılacak işlem ise 10+2*3-2 şeklinde olsun.
+
+İşlemleri kullanıcı girmeyecek olup kodunuzda yazmış olmalısınız.
 
 İpucu 1: Kullanıcıdan veri almak için `Scanner` sınıfını kullanabilirsiniz.
 
