@@ -1,3 +1,4 @@
+package TemelPratikler;
 import java.util.Scanner;
 
 public class VucutKitleIndeksiHesaplama {
