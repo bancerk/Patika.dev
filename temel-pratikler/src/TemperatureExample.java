@@ -15,5 +15,7 @@ public class TemperatureExample {
         double f = (celsius * 1.8) + 32;
 
         System.out.println("C -> F : " + f);
+
+        scanner.close();
     }
 }

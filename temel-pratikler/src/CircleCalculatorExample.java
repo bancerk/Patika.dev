@@ -20,9 +20,7 @@ public class CircleCalculatorExample {
         System.out.println("Dairenin alanları: " + area + "-" + area2);
         System.out.println("Dairenin çevresi: " + circumference + "-" + circumference2);
 
-
-
-
+        scanner.close();
 
     }
 }
