@@ -1,5 +1,5 @@
-package IfElse;
-public class Main {
+package Loops;
+public class IfElseLoops {
     public static void main (String[] args) {
 
         int number = -5;
