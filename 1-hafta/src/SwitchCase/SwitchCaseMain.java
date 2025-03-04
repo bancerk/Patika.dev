@@ -1,4 +1,4 @@
-package switchcase;
+package SwitchCase;
 
 public class SwitchCaseMain {
 

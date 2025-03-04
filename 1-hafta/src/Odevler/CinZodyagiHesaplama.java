@@ -1,4 +1,4 @@
-package Odev2;
+package Odevler;
 
 import java.util.Scanner;
 

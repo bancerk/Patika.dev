@@ -1,4 +1,4 @@
-package Odev1;
+package Odevler;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class UcakBiletiFiyatiHesaplama {
         if (age >= 0 && age < 12) {ageDiscount = 0.5;}
         else if (age >=12 && age <24) {ageDiscount = 0.90;}
         else if (age >= 25 && age <65) {ageDiscount = 1.00;}
-        else if (age >= 65) {ageDiscount = 0.70;};
+        else if (age >= 65) ageDiscount = 0.70;
 
         System.out.println("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ):");
         int travelType = scanner.nextInt();

@@ -1,4 +1,4 @@
-package Odev3;
+package Odevler;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class ArtikYilHesaplama {
             System.out.println(year + " bir artık yıldır !");
         }
     
-        else {System.out.println(year + " bir artık yıl değildir!");};
+        else System.out.println(year + " bir artık yıl değildir!");
 
         scanner.close();
     }
