@@ -1,4 +1,4 @@
-package PratikAritmetikIslemlerveIslemOnceligi;
+package AritmetikIslemOnceligi;
 
 import java.util.Scanner;
 
