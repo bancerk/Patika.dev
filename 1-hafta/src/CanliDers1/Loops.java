@@ -30,7 +30,7 @@ public class Loops {
 
 // loopları iç içe kullanabilirsin
 
-        for(int i = 0; i<10; i++) {
+        for(int k = 0; k<10; k++) {
             for (int j = 0; j < 20; j++) {
                 System.out.println(i + " - " + j); // 10 x 20 = 200 defa çalışır
             }

@@ -5,39 +5,51 @@ import java.util.Scanner;
 public class UcakBiletiFiyatiHesaplama {
 
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Mesafeyi km türünden giriniz :");        
+
+        // Kullanıcıdan mesafe bilgisi alınıyor
+        System.out.println("Mesafeyi km türünden giriniz :");
         int distance = scanner.nextInt();
 
+        // Kullanıcıdan yaş bilgisi alınıyor
         System.out.println("Yaşınızı giriniz :");
         int age = scanner.nextInt();
 
         double ageDiscount = 0.0;
 
-        if (age >= 0 && age < 12) {ageDiscount = 0.5;}
-        else if (age >=12 && age <24) {ageDiscount = 0.90;}
-        else if (age >= 25 && age <65) {ageDiscount = 1.00;}
-        else if (age >= 65) ageDiscount = 0.70;
+        // Yaşa göre indirim oranları belirleniyor
+        if (age >= 0 && age < 12) {
+            ageDiscount = 0.5; // %50 indirim
+        } else if (age >= 12 && age < 25) {
+            ageDiscount = 0.90; // %10 indirim (1 - 0.90 = 0.10)
+        } else if (age >= 25 && age < 65) { // 25-64 yaş arası
+            ageDiscount = 1.00; // İndirim yok
+        } else if (age >= 65) { // 65 ve üstü
+            ageDiscount = 0.70; // %30 indirim
+        }
 
+        // Yolculuk tipi seçimi alınıyor
         System.out.println("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ):");
         int travelType = scanner.nextInt();
 
         switch (travelType) {
-            case 1:{
+            case 1:{ // Tek Yön
                 System.out.println("Toplam Tutar = " + (distance*0.10) * ageDiscount + " TL");
-            break;
+                break;
             }
 
-            case 2:{
-            System.out.println("Toplam Tutar = " + (distance*0.10) * 2 * ageDiscount * 0.80 + " TL");
-            break;
+            case 2:{ // Gidiş-Dönüş
+                // İndirimlerin sıralaması: Önce yaş indirimi, sonra %20 ek indirim
+                // Formül: (mesafe * 0.10) * 2 (gidiş-dönüş) * yaş indirimi * %20 indirim
+                System.out.println("Toplam Tutar = " + (distance*0.10) * 2 * ageDiscount * 0.80 + " TL");
+                break;
             }
-            
-            default:{System.out.println("Hatalı Veri Girdiniz !");
-            break;}
-            
+
+            default:{
+                System.out.println("Hatalı Veri Girdiniz !");
+                break;
+            }
         }
         scanner.close();
     }
