@@ -1,4 +1,4 @@
-package MathApi;
+package DateAndMathApi;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

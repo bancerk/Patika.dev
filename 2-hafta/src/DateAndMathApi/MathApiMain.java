@@ -1,4 +1,4 @@
-package MathApi;
+package DateAndMathApi;
 
 public class MathApiMain {
 
