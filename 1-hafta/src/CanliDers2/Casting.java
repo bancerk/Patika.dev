@@ -27,7 +27,7 @@ public class Casting {
         System.out.println("ondalikSayi: " + sayi2);
 
         String yaziDegeri = String.valueOf(tamSayi);
-        System.out.println("Yaazı değeri: " + yaziDegeri);
+        System.out.println("Yazı değeri: " + yaziDegeri);
 
         float f = 12.34F;
 
