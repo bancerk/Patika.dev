@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming;
+package ObjectOrientedProgramming.Abstract;
 
 public abstract class BigCat extends Animal{
         // Cat classını da abstract hale getirerek implementation yapma gereğini yok ettik

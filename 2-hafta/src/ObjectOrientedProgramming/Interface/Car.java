@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming;
+package ObjectOrientedProgramming.Interface;
 
 public class Car implements Vehicle {
 

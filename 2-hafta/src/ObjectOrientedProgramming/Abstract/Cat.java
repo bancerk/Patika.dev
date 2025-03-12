@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming;
+package ObjectOrientedProgramming.Abstract;
 
 public class Cat extends BigCat{
     @Override
