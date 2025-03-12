@@ -6,27 +6,36 @@ public class AsalSayiBulma {
 
     public static void main(String[] args) {
 
+        // Kullanıcıdan giriş almak için Scanner nesnesi oluşturuluyor
         Scanner scanner = new Scanner(System.in);
 
+        // Kullanıcıdan sayı girmesi isteniyor
         System.out.print("Sayı giriniz: ");
         int userNumber = scanner.nextInt();
 
-        if (isPrime(userNumber,2)){
+        // isPrime() fonksiyonu kullanılarak sayının asal olup olmadığı kontrol ediliyor
+        if (isPrime(userNumber, 2)) {
             System.out.println(userNumber + " sayısı ASALDIR !");
-        }else System.out.println(userNumber + " sayısı ASAL değildir !");
-
+        } else {
+            System.out.println(userNumber + " sayısı ASAL değildir !");
+        }
     }
 
-    private static boolean isPrime (int userNumber, int bolen){
+    // Rekürsif olarak sayının asal olup olmadığını kontrol eden metot
+    // userNumber: kontrol edilecek sayı, bolen: kontrol edilen bölen
+    private static boolean isPrime(int userNumber, int bolen) {
 
-        if (userNumber <2) return false;
+        // 2'den küçük sayılar asal değildir
+        if (userNumber < 2) return false;
 
+        // Eğer userNumber, şu anki bolene tam bölünüyorsa asal değildir
         if (userNumber % bolen == 0) return false;
 
-        return isPrime(userNumber,bolen+1);
+        // Bolen değeri arttırılarak rekürsif çağrı yapılıyor
+        return isPrime(userNumber, bolen + 1);
     }
-
 }
+
 
 
 /*Java dilinde "Recursive" metot kullanarak, kullanıcıdan alınan sayının "Asal" sayı olup olmadığını bulan programı yazın.
