@@ -1,8 +1,8 @@
-package Methods;
+package Methods.RecursiveMethods;
 
 import java.util.Scanner;
 
-public class RecursiveMethods3 {
+public class PowerOfExample {
 
     public static void main(String[] args) {
 

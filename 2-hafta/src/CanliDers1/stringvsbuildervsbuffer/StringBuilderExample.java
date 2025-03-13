@@ -1,4 +1,4 @@
-package week2.session1.stringvsbuildervsbuffer;
+package CanliDers1.stringvsbuildervsbuffer;
 
 public class StringBuilderExample {
 

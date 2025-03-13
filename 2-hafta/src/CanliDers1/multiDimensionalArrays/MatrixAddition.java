@@ -1,4 +1,4 @@
-package week2.session1.multiDimensionalArrays;
+package CanliDers1.multiDimensionalArrays;
 
 public class MatrixAddition {
     public static void main(String... args) {

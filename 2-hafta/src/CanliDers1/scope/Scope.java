@@ -1,4 +1,4 @@
-package week2.session1.scope;
+package CanliDers1.scope;
 
 public class Scope {
 

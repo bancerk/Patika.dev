@@ -1,4 +1,4 @@
-package week2.session1.methods;
+package CanliDers1.methods;
 
 public class Person {
 

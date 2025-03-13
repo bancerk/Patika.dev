@@ -1,4 +1,4 @@
-package week2.session1.staticKeyword;
+package CanliDers1.staticKeyword;
 
 public class Counter {
     // Static değişken - tüm nesneler tarafından paylaşılır

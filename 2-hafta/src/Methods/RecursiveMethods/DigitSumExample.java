@@ -1,8 +1,8 @@
-package Methods;
+package Methods.RecursiveMethods;
 
 import java.util.Scanner;
 
-public class RecursiveMethods5 {
+public class DigitSumExample {
     public static void main(String[] args) {
 
         // Digit Sum example

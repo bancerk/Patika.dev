@@ -1,4 +1,4 @@
-package week2.session1.mathUtilities;
+package CanliDers1.mathUtilities;
 
 public class MathOperations {
 

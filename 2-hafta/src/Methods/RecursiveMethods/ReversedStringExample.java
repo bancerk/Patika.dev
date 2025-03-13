@@ -1,8 +1,8 @@
-package Methods;
+package Methods.RecursiveMethods;
 
 import java.util.Scanner;
 
-public class RecursiveMethods4 {
+public class ReversedStringExample {
 
     public static void main(String[] args) {
 

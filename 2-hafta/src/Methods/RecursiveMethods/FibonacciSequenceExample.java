@@ -1,6 +1,6 @@
-package Methods;
+package Methods.RecursiveMethods;
 
-public class RecursiveMethods2 {
+public class FibonacciSequenceExample {
 
     public static void main(String[] args) {
         int fibonacci = fibonacci(9);

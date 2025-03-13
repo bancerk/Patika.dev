@@ -1,4 +1,4 @@
-package week2.session1.stringUtilities;
+package CanliDers1.stringUtilities;
 
 public class StringMethods {
 
