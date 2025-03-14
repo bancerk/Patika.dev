@@ -13,10 +13,6 @@ public class Employee {
         this.hireYear = hireYear;
     }
 
-    public Employee(int salary) {
-
-    }
-
     public String getName() {
         return name;
     }
@@ -49,4 +45,7 @@ public class Employee {
     public void setHireYear(int hireYear) {
         this.hireYear = hireYear;
     }
+
+
+
 }

@@ -1,6 +1,6 @@
 package Odevler.MaasHesaplayici;
 
-public class bonus extends  Employee{
+public class bonus extends Employee {
 
 
     public bonus(String name, int salary, int workHours, int hireYear) {
