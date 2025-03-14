@@ -1,0 +1,5 @@
+erişim belirleyici     aynı Class      aynı Package    subclass        farklı Package
+public                 erişilebilir    erişilebilir    erişilebilir    erişilebilir
+protected              erişilebilir    erişilebilir    erişilebilir    hayır
+default                erişilebilir    erişilebilir    hayır           hayır
+private                erişilebilir    hayır           hayır           hayır

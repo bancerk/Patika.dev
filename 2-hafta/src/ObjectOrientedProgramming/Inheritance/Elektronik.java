@@ -11,4 +11,16 @@ public class Elektronik extends Product {
     public void setWarrantyPeriod(int warrantyPeriod) {
         this.warrantyPeriod = warrantyPeriod;
     }
+
+    public void setName() {
+
+    }
+
+    public void setPrice() {
+
+    }
+
+    public void setWarrantyPeriod() {
+
+    }
 }
