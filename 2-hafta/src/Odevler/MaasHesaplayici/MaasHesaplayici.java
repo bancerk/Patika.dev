@@ -27,6 +27,14 @@ public class MaasHesaplayici {
 
         Employee employee = new Employee(employeeName,salary,workHours,hireYear);
 
+        employee.tax();
+        employee.bonus();
+        employee.raiseSalary();
+
+        System.out.println("Vergi ve Bonuslar ile birlikte maaş: ");
+
+        System.out.println("Toplam maaş: ");
+
 
 
     }
