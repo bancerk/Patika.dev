@@ -1,84 +1,67 @@
 package Odevler.MaasHesaplayici;
 
 public class Employee {
-    String name;
+    String employeeName;
     int salary;
     int workHours;
     int hireYear;
     int bonus;
 
     public Employee(String employeeName, int salary, int workHours, int hireYear) {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getSalary(int salary) {
-        return this.salary;
-    }
-
-    public int setSalary(int salary) {
+        this.employeeName = employeeName;
         this.salary = salary;
-        return salary;
-    }
-
-    public int getWorkHours() {
-        return workHours;
-    }
-
-    public void setWorkHours(int workHours) {
         this.workHours = workHours;
-    }
-
-    public int getHireYear() {
-        return hireYear;
-    }
-
-    public void setHireYear(int hireYear) {
         this.hireYear = hireYear;
     }
 
 
+    public double tax () {
 
+        double tax;
+        double taxed;
 
-    public void tax () {
-        this.salary = getSalary(salary);
         if(salary < 1000){
-            double tax = 0;
-            System.out.println("Vergi: "+ tax);
+            tax = 0;
+            taxed = tax;
         }else {
-            double tax = 0.97;
-            System.out.println("Vergi: "+ tax);
+            tax = 0.97;
+            taxed = salary - (salary*tax);
         }
+        return taxed;
     }
 
-    public void bonus() {
-        this.workHours = getWorkHours();
-        this.salary = getSalary(salary);
+
+    public int bonus() {
+
         if (workHours > 40){
             bonus = (workHours-40)*30;
-            System.out.println("Bonus: " + bonus);
         }
-        System.out.println("Bonus: " + bonus);
+        return bonus;
     }
 
-    public void raiseSalary() {
-        this.hireYear = getHireYear();
-        this.salary = getSalary(salary);
+
+
+    public int raiseSalary() {
+
+        int raise;
+
+        int raisedSalary;
 
         int hiredDuration = 2021 - hireYear;
 
         if (hiredDuration >19){
-            salary = salary * 115/100;
+            raise = salary * 115/100;
+            raisedSalary = raise - salary;
         } else if (hiredDuration >9 && hiredDuration <20) {
-            salary = salary * 110/100;
+            raise = salary * 110/100;
+            raisedSalary = raise - salary;
         } else if (hiredDuration < 10) {
-            salary = salary * 105/100;
+            raise = salary * 105/100;
+            raisedSalary = raise - salary;
+        } else {
+            raise = salary;
+            raisedSalary = raise - salary;
         }
+        return raisedSalary;
     }
 }
