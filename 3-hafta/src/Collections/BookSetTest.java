@@ -47,13 +47,13 @@ public class BookSetTest {
         Tree setimiz henüz bu kompleks elemanları nasıl sıralaması gerektiğini bilmiyor
 
         Output:
-        Exception in thread "main" java.lang.ClassCastException: class Collections.Book cannot be cast to class java.lang.Comparable (Collections.Book is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
+        Exception in thread "Main" java.lang.ClassCastException: class Collections.Book cannot be cast to class java.lang.Comparable (Collections.Book is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
 	at java.base/java.util.TreeMap.compare(TreeMap.java:1607)
 	at java.base/java.util.TreeMap.addEntryToEmptyMap(TreeMap.java:812)
 	at java.base/java.util.TreeMap.put(TreeMap.java:821)
 	at java.base/java.util.TreeMap.put(TreeMap.java:570)
 	at java.base/java.util.TreeSet.add(TreeSet.java:261)
-	at Collections.BookSetTest.main(BookSetTest.java:39)
+	at Collections.BookSetTest.Main(BookSetTest.java:39)
 
 	Comparable hale getirmek için Book classımıza implement ediyoruz:
 

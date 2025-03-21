@@ -1,11 +1,12 @@
 package Odevler.FilmVeKoleksiyonFiltreleme;
 
+// @Entity
 public class Film {
 
     private String movName;
     private int releaseYear;
     private String movGenre;
-    private double imdbPt;
+    private double imdbScore;
 
     public String getMovName() {
         return movName;
@@ -31,20 +32,31 @@ public class Film {
         this.movGenre = movGenre;
     }
 
-    public double getImdbPt() {
-        return imdbPt;
+    public double getImdbScore() {
+        return imdbScore;
     }
 
-    public void setImdbPt(double imdbPt) {
-        this.imdbPt = imdbPt;
+    public void setImdbScore(double imdbScore) {
+        this.imdbScore = imdbScore;
     }
 
-    public Film(String movName, int releaseYear, String movGenre, double imdbPt) {
+    public Film(String movName,int releaseYear,String movGenre,double imdbScore) {
         this.movName = movName;
         this.releaseYear = releaseYear;
         this.movGenre = movGenre;
-        this.imdbPt = imdbPt;
+        this.imdbScore = imdbScore;
+    }
 
+    public Film() {
+    }
 
+    @Override
+    public String toString() {
+        return "Film{" +
+                "movName='" + movName + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", movGenre='" + movGenre + '\'' +
+                ", imdbScore=" + imdbScore +
+                '}';
     }
 }
