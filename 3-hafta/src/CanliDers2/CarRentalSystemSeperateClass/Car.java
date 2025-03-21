@@ -1,4 +1,4 @@
-package CanliDers2.CodingSession.CarRentalSystemSeperateClass;
+package CanliDers2.CarRentalSystemSeperateClass;
 
 // @Entity
 public class Car {

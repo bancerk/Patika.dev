@@ -1,4 +1,4 @@
-package CanliDers2.CodingSession.CarRentalSystemSeperateClass;
+package CanliDers2.CarRentalSystemSeperateClass;
 
 import java.util.ArrayList;
 import java.util.List;
