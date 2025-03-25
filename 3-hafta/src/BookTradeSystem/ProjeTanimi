@@ -1,0 +1,15 @@
+Proje Konusu
+
+Kitap alışveriş sistemi tasarlanacaktır.
+
+Gereksinimler
+
+1.  Müşteriler sipariş oluşturur ve sadece kendi siparişlerini listeleyebilir.
+
+2.  Bir sipariş birden fazla üründen oluşabilir fakat bir dergiden en fazla 3 tane satın alabilir.
+
+3.  Admin sistemindeki bütün siparişleri listeleyebilir.
+
+4.  Ödeme modülü gerekli değildir.
+
+5.  Müşteriler bireysel ya da kurumsal olabilir.
