@@ -1,0 +1,8 @@
+## Generics Nedir?
+
+Java Generics, Java 5 ile birlikte tanıtılan ve tip güvenliği sağlayan bir özelliktir. Bu özellik, sınıfların ve metodların farklı veri tipleriyle çalışabilmesini sağlar. Generics sayesinde:
+
+- Derleme zamanında tip kontrolü yapılır.
+- Cast (tip dönüşümü) işlemlerine olan ihtiyaç azalır.
+- Kodun okunabilirliği ve bakımı kolaylaşır.
+- Tip güvenliği sağlanır.
