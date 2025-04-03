@@ -1,5 +1,6 @@
-public class Main {
+public class exercise5 {
     public static void main(String[] args) {
+
         // 1'den 100'e kadar olan sayıları dene
         for (int x = 1; x <= 100; x++) {
             boolean isPrime = true; // rakamın asal sayı olduğunu varsayıyoruz
