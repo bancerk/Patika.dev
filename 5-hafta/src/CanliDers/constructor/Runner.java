@@ -1,4 +1,4 @@
-package CanliDers1.constructor;
+package CanliDers.constructor;
 
 public class Runner {
     public static void main(String[] args) {

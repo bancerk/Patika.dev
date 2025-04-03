@@ -7,13 +7,14 @@ public interface Vehicle {
 
     private void stop() {
         // java v.8 öncesi bu tanım hatalı
-        // interface içerisinde public olmalı. değil ise body'e3 sahip olmalı{}
+        // interface içerisinde public olmalı. değil ise body'e sahip olmalı{}
     }
     default void stop1(){
         // java v.8 öncesinde interface içerisinde default method tanımı yapılamıyordu
     }
 
-    // default void stop2(); // default method ve body'si olmayan method tanımı yapılamaz
+    // default void stop2();
+    // default method ve body'si olmayan method tanımı yapılamaz
 
 
 }

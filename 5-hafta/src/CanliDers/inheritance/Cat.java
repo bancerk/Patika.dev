@@ -1,4 +1,4 @@
-package CanliDers1.inheritance;
+package CanliDers.inheritance;
 
 public class Cat extends Mammal{
     String name="catName";

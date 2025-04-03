@@ -1,4 +1,4 @@
-package CanliDers1.polymorphism;
+package CanliDers.polymorphism;
 
 public class Methots {
 

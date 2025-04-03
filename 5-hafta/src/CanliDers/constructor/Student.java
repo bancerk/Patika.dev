@@ -1,4 +1,4 @@
-package CanliDers1.constructor;
+package CanliDers.constructor;
 
 public class Student {
     //field, değişken, alan
@@ -18,7 +18,7 @@ public class Student {
     }
     /*
     OPP ilkeleri
-    CanliDers1.inheritance
+    Inheritance
 
      */
 }

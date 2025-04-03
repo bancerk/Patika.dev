@@ -1,8 +1,8 @@
-package CanliDers1.polymorphism.overloading;
+package CanliDers.polymorphism.overloading;
 
 public class Cat {
      //overloading aynı nclass içinde olur.
-    //overloading için CanliDers1.inheritance aranmaz
+    //overloading için inheritance aranmaz
 
     public void add() {
         System.out.println("patika");

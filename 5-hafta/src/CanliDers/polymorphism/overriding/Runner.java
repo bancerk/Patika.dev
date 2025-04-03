@@ -1,4 +1,4 @@
-package CanliDers1.polymorphism.overriding;
+package CanliDers.polymorphism.overriding;
 
 public class Runner {
     public static void main(String[] args) {

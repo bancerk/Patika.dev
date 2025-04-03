@@ -1,4 +1,4 @@
-package CanliDers1.inheritance;
+package CanliDers.inheritance;
 
 public class Parrot extends Birds{
 }
