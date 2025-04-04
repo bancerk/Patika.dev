@@ -34,7 +34,7 @@ public class Main {
         // Print the formatted start and end times of the work shift
         // %-17s: left-align string in 17-character width
         // %2d:%02d: format hour and minute with leading zero if needed
-        System.out.printf("%-17s %2d : %02d %n %-17s %2d : %02d %n",
+        System.out.printf("%-17s%2d:%02d%n%-17s%2d:%02d%n",
                 "Shift starts at:",
                 day.getWorkDayStartHour(),
                 day.getWorkDayStartMinute(),
