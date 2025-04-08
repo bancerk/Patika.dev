@@ -16,6 +16,10 @@ public class Course {
         this.hoursOfWeek = hoursOfWeek;
     }
 
+    public Course(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
