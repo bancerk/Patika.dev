@@ -1,4 +1,4 @@
-package streams.optionals.intermediate;
+package streams.intermediate;
 
 public class Customer {
 

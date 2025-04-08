@@ -1,4 +1,4 @@
-package streams.optionals.intermediate;
+package streams.intermediate;
 
 import Practices.studentInfoSystem.Course;
 
