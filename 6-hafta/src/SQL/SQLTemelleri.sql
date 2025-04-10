@@ -20,7 +20,7 @@ SELECT * FROM film WHERE rental_rate<>4.99; --output all except rental rate 4.99
 --Logical operators
 SELECT * FROM actor WHERE first_name='Penelope' AND last_name='Monroe';
 SELECT * FROM actor WHERE first_name='Penelope' OR first_name='Bob';
-SELECT * FROM actor WHERE first_name='Penelope' AND last_name='Monroe'OR first_name='Bob'AND last_name='Fawcett'; -- OR operates as if a new filter is being applied from scratch
+SELECT * FROM actor WHERE first_name='Penelope' AND last_name='Monroe' OR first_name='Bob'AND last_name='Fawcett'; -- OR operates as if a new filter is being applied from scratch
 SELECT * FROM actor WHERE first_name='Penelope' AND NOT last_name='Monroe';
 SELECT * FROM actor WHERE first_name='Penelope' AND last_name!='Monroe';
 
