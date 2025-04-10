@@ -1,0 +1,32 @@
+\list - list dbs
+
+\connect "db-name" - switches to specified db
+
+\dt - lists tables in currently connected db
+
+\d "table-name" lists column names and types,etc on the specified table
+
+use query inputs the same way as terminal commands
+
+Multiple row queries:
+dvdrental=# SELECT * FROM actor WHERE first_name='Penelope';
+ actor_id | first_name | last_name |      last_update
+----------+------------+-----------+------------------------
+        1 | Penelope   | Guiness   | 2013-05-26 14:47:57.62
+       54 | Penelope   | Pinkett   | 2013-05-26 14:47:57.62
+      104 | Penelope   | Cronyn    | 2013-05-26 14:47:57.62
+      120 | Penelope   | Monroe    | 2013-05-26 14:47:57.62
+(4 rows)
+
+    // Notice terminal input change from "=#" to "-#" indicating the same query is ongoing
+dvdrental=# SELECT * FROM actor
+dvdrental-# WHERE first_name='Penelope'
+dvdrental-# ;
+ actor_id | first_name | last_name |      last_update
+----------+------------+-----------+------------------------
+        1 | Penelope   | Guiness   | 2013-05-26 14:47:57.62
+       54 | Penelope   | Pinkett   | 2013-05-26 14:47:57.62
+      104 | Penelope   | Cronyn    | 2013-05-26 14:47:57.62
+      120 | Penelope   | Monroe    | 2013-05-26 14:47:57.62
+(4 rows)
+
