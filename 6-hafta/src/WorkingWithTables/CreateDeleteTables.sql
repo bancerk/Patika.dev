@@ -13,7 +13,7 @@ CREATE TABLE author(
 );
 
 SELECT * FROM author;
-INSERT INTO author(id,first_name,last_name,email,birthday) -- does not need to be in the same sequence as the table columns, but data entry should be done with the sequence this line dictates later on
+INSERT INTO author(first_name,last_name,email,birthday) -- does not need to be in the same sequence as the table columns, but data entry should be done with the sequence this line dictates later on
 -- id does not need to be put in because it is serial type, it's provided automatically
 VALUES
 ('Haruki','Murakami','haruki@murakami.com','1948-11-07'),
