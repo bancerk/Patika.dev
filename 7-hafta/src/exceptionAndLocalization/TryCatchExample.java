@@ -42,13 +42,13 @@ public class TryCatchExample {
             System.out.println(5 / 0);
         }catch (RuntimeException e){
             System.out.println("RuntimeException!" + e.getMessage());
-        }catch (ArithmeticException e){
+        }/*catch (ArithmeticException e){
             // ArithmeticException zaten RuntimeException'ın subclassı
             // Bu nedenle catch bloklarının sıralamasında hata veriyor
             // catch blokları özelden genele doğru gitmelidir
 
             System.out.println("Bir hata oluştu" + e.getMessage());
-        }
+        }*/
     }
 
     private static void method() throws IOException {
