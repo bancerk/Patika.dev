@@ -26,4 +26,4 @@ insert into book (title, page_number, author_id) values ('Mackenna''s Gold', 648
 
 --JOIN
 SELECT * FROM book WHERE author_id=2;
-SELECT * FROM book JOIN author ON author_id=book.author_id;
+SELECT * FROM book JOIN author ON author.id=book.author_id;
