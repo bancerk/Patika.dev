@@ -1,4 +1,4 @@
-package exceptionAndLocalization;
+package exception;
 
 public class AutoClosableExample {
 

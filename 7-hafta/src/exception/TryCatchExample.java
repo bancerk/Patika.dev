@@ -1,4 +1,4 @@
-package exceptionAndLocalization;
+package exception;
 
 import java.io.IOException;
 
