@@ -1,0 +1,3 @@
+Thread-safe kod, aynı anda birden fazla thread aynı veriye eriştiğinde
+doğru ve tutarlı şekilde çalışan kod
+bu erişimin çakışma tutarsızlık ve hata yaratmaması amaçlanır
