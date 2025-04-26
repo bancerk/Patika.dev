@@ -4,30 +4,30 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
-public class Person implements Serializable {
+public class PersonSerialized implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private String name;
     private int age;
     private Address address;
+    private String email;
     private List<String> phoneNumbers;
     private transient String password; // transient keywordu ile serialize edilmiyor Hassas veriler için kullanılır
 
-    public Person(String name, int age, Address address, List<String> phoneNumbers, String password) {
+    public PersonSerialized(String name, int age, String email) {
         this.name = name;
         this.age = age;
-        this.address = address;
-        this.phoneNumbers = phoneNumbers;
-        this.password = password;
+        this.email = email;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "PersonSerialized{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", address=" + address +
-                ", phoneNumbers=" + phoneNumbers +
-                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

@@ -8,7 +8,7 @@ public class FileInputStreamMain {
 
     public static void main(String[] args) throws IOException {
 
-        File file = new File("veriler.txt");
+        File file = new File("/home/canberk/IdeaProjects/Patika.dev/8-hafta/src/resources/veriler.txt");
         System.out.println("Size: " + file.length());
 
         System.out.println(file.getAbsolutePath());

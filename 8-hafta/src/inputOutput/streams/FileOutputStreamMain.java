@@ -8,7 +8,7 @@ public class FileOutputStreamMain {
 
     public static void main(String[] args) throws IOException {
 
-        File file = new File("/home/canberk/Desktop/deneme-klasör/output.txt");
+        File file = new File("/home/canberk/IdeaProjects/Patika.dev/8-hafta/src/resources/veriler.txt");
 
         System.out.println("Exists: " + file.exists());
         System.out.println("Size: " + file.length());
