@@ -1,34 +1,32 @@
 package dao;
 
 import model.Customer;
-
-import java.io.InputStream;
 import java.sql.*;
-import java.util.Properties;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomerDao {
 
-    private final String saveScript = "INSERT INTO customer(name,email,password) VALUES(?,?,?);";
+    private final String url = "jdbc:postgresql://localhost:5432/patika_store";
 
-    public void save(Customer customer){
+
+    private final String saveScript = """
+            INSERT INTO customer(name,email,password) VALUES(?,?,?);
+            """;
+
+    private final String findByIdScript = """
+            SELECT * FROM customer WHERE id = ?;
+            """;
+
+    private final String findAllScript = """
+            SELECT * FROM customer;
+            """;
+
+    public void save(Customer customer) {
         try {
-            // Load the properties file from classpath
-            Properties properties = new Properties();
-            InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties");
-            if (input == null) {
-                throw new RuntimeException("config.properties file not found in resources folder");
-            }
-            properties.load(input);
+            Connection connection = DriverManager.getConnection(url);
+            Statement statement = connection.createStatement();
 
-            // Read the db connection details from properties file
-            String url = properties.getProperty("db.url");
-            String user = properties.getProperty("db.username");
-            String password = properties.getProperty("db.password");
-
-            // Connect to the database
-            Connection connection = DriverManager.getConnection(url, user, password);
-
-            // Prepare and execute the insert statement
             PreparedStatement ps = connection.prepareStatement(saveScript);
             ps.setString(1, customer.getCustomerName());
             ps.setString(2, customer.getCustomerEmail());
@@ -39,5 +37,59 @@ public class CustomerDao {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Customer findById(long id) {
+
+        Customer customer = new Customer();
+
+        try {
+            Connection connection = DriverManager.getConnection(url);
+            Statement statement = connection.createStatement();
+
+            ResultSet rs = statement.executeQuery(findAllScript);
+
+            PreparedStatement ps = connection.prepareStatement(findByIdScript);
+            ps.setLong(1, id);
+
+            while (rs.next()) {
+                customer.setId(rs.getLong("id"));
+                customer.setCustomerName(rs.getString("name"));
+                customer.setCustomerEmail(rs.getString("email"));
+                //customer.setCreationDate(rs.getDate("createddate"));
+                //customer.setUpdatedDate(rs.getDate("updateddate"));
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return customer;
+    }
+
+    public List<Customer> findAll() {
+
+        List<Customer> customerList = new ArrayList<>();
+        Customer customer = new Customer();
+
+
+        try {
+            Connection connection = DriverManager.getConnection(url);
+            Statement statement = connection.createStatement();
+
+            ResultSet rs = statement.executeQuery(findAllScript);
+
+            while (rs.next()) {
+                customer.setId(rs.getLong("id"));
+                customer.setCustomerName(rs.getString("name"));
+                customer.setCustomerEmail(rs.getString("email"));
+                //customer.setCreationDate(rs.getDate("createddate"));
+                //customer.setUpdatedDate(rs.getDate("updateddate"));
+
+                customerList.add(customer);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return customerList;
     }
 }

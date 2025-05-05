@@ -8,7 +8,6 @@ public class PatikaStoreMain {
 
         Scanner scanner = new Scanner(System.in);
 
-
         while (true) {
             System.out.println("====Patika Store Hoş Geldiniz===");
             System.out.println("1 - Müşteri Kaydı");
@@ -47,6 +46,6 @@ public class PatikaStoreMain {
         String password = scanner.nextLine();
 
         CustomerService customerService = new CustomerService();
-        customerService.save(name,email,password);
+        customerService.save(name, email, password);
     }
 }

@@ -1,10 +1,7 @@
-#DB connection
-src/main/resources/config.properties
-
 # Ignored folders
 /.idea
 /out
-/target/*
+/target
 
 
 # Compiled class file

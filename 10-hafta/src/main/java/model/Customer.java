@@ -1,12 +1,20 @@
 package model;
 
-import java.time.LocalDateTime;
-
 public class Customer extends BaseModel {
 
     private String customerName;
     private String customerEmail;
     private String customerPassword; // todo: hash
+
+    public Customer() {
+
+    }
+
+    public Customer(String customerName, String customerEmail, String customerPassword) {
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPassword = customerPassword;
+    }
 
     public String getCustomerName() {
         return customerName;
@@ -29,12 +37,6 @@ public class Customer extends BaseModel {
     }
 
     public void setCustomerPassword(String customerPassword) {
-        this.customerPassword = customerPassword;
-    }
-
-    public Customer(String customerName, String customerEmail, String customerPassword) {
-        this.customerName = customerName;
-        this.customerEmail = customerEmail;
         this.customerPassword = customerPassword;
     }
 }
