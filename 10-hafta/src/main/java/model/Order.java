@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 public class Order extends BaseModel {
 
     private Customer customer;
-    private BigDecimal orderTotalAmount;
+    private BigDecimal orderAmount;
     private LocalDateTime orderDate;
 
     public Order(Customer customer) {
@@ -22,12 +22,12 @@ public class Order extends BaseModel {
         this.customer = customer;
     }
 
-    public BigDecimal getOrderTotalAmount() {
-        return orderTotalAmount;
+    public BigDecimal getOrderAmount() {
+        return orderAmount;
     }
 
-    public void setOrderTotalAmount(BigDecimal orderTotalAmount) {
-        this.orderTotalAmount = orderTotalAmount;
+    public void setOrderAmount(BigDecimal orderTotalAmount) {
+        this.orderAmount = orderTotalAmount;
     }
 
     public LocalDateTime getOrderDate() {
