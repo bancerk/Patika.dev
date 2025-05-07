@@ -1,4 +1,4 @@
-package week9.varargs;
+package canliDers.varargs;
 
 public class Varargs01 {
     public static void main(String[] args) {

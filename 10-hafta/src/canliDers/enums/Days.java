@@ -1,4 +1,4 @@
-package week9.enums;
+package canliDers.enums;
 
 public enum Days {
     SUNDAY,

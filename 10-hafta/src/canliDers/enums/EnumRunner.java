@@ -1,4 +1,4 @@
-package week9.enums;
+package canliDers.enums;
 
 public class EnumRunner {
     public static void main(String[] args) {
