@@ -20,6 +20,11 @@ public class Test {
         enBuyukElemanSelf(list);
         long end2 = System.nanoTime();
         System.out.println("\nMethod 2 (map after reduce): " + (end2 - start2) + " ns");
+
+        System.out.println("Map Diff: " + ((end1 - start1) - (end2 - start2)) + "ns");
+
+        // https://chatgpt.com/share/681a505c-0a4c-8009-b9be-4156c4949685
+
     }
 
     public static void enBuyukEleman2(ArrayList<Integer> list) {
