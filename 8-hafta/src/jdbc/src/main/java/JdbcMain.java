@@ -6,9 +6,11 @@ public class JdbcMain {
 
 //        Class.forName("org.postgresql.Driver");
 
-        String url = "jdbc:postgresql://localhost:5432/canberk";
+        String url = "jdbc:postgresql://localhost:5432/example";
+        String user = "example";
+        String password = "example";
 
-        Connection connection = DriverManager.getConnection(url);
+        Connection connection = DriverManager.getConnection(url, user, password);
 
         System.out.println("DB bağlantı gerçekleşti");
 
