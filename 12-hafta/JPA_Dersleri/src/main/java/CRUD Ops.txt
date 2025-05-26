@@ -1,0 +1,37 @@
+// CREATE
+
+//transaction (atomic)
+
+        transaction.begin();
+        Customer c1 = new Customer();
+        c1.setOnDate(LocalDate.now());
+        c1.setName("Patika");
+        c1.setMail("info@patika.dev");
+        c1.setGender(Customer.GENDER.FEMALE);
+        entityManager.persist(c1);
+        transaction.commit();
+
+
+        transaction.begin();
+        Customer customer = new Customer();
+        customer.setName("Mustafa");
+        customer.setMail("test@patika.dev");
+        customer.setGender(Customer.GENDER.MALE);
+        customer.setOnDate(LocalDate.now());
+        entityManager.persist(customer);
+        transaction.commit();
+
+// FIND
+        Customer customer = entityManager.find(Customer.class, 1);
+        System.out.println(customer.toString());
+
+// UPDATE
+        transaction.begin();
+        customer.setName("Update Test");
+        entityManager.persist(customer);
+        transaction.commit();
+
+// DELETE
+        transaction.begin();
+        entityManager.remove(customer);
+        transaction.commit();

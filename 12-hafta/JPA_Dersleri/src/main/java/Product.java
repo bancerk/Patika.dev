@@ -1,5 +1,7 @@
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "products")
 public class Product {
@@ -18,24 +20,24 @@ public class Product {
     @Column(name = "product_stock")
     private int stock;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_code_id", referencedColumnName = "code_id")
     private Code code;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_supplier_id", referencedColumnName = "supplier_id")
     private Supplier supplier;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_category_id", referencedColumnName = "category_id")
     private Category category;
 
     @ManyToMany
     @JoinTable(
-            name = "ProductColors",
-            joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "color_id"))
-    private List<Colors> colorList;
+            name = "pro2colors",
+            joinColumns = {@JoinColumn(name = "pro2color_product_id")},
+            inverseJoinColumns = {@JoinColumn(name = "pro2color_color_id")})
+    private List<Color> colorList;
 
     public Product() {
     }
@@ -50,6 +52,7 @@ public class Product {
                 ", code=" + code +
                 ", supplier=" + supplier +
                 ", category=" + category +
+                ", colorList=" + colorList +
                 '}';
     }
 
@@ -107,5 +110,13 @@ public class Product {
 
     public void setCode(Code code) {
         this.code = code;
+    }
+
+    public List<Color> getColorList() {
+        return colorList;
+    }
+
+    public void setColorList(List<Color> colorList) {
+        this.colorList = colorList;
     }
 }

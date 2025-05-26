@@ -1,3 +1,5 @@
+import jakarta.persistence.*;
+
 @Entity
 @Table(name = "ProductColors")
 public class ProductColors {
@@ -11,5 +13,5 @@ public class ProductColors {
 
     @ManyToOne
     @JoinColumn(name = "color_id")
-    private Colors colors;
+    private Color color;
 }
