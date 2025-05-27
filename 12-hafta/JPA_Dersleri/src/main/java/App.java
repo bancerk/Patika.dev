@@ -1,7 +1,4 @@
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
+import jakarta.persistence.*;
 
 public class App {
 
@@ -12,7 +9,6 @@ public class App {
         EntityTransaction transaction = entityManager.getTransaction();
 
         transaction.begin();
-
 
 
         transaction.commit();

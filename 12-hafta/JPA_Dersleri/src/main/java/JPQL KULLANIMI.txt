@@ -1,0 +1,141 @@
+// JPQL KULLANIMI
+
+// Custom Query Creation
+
+
+
+
+// SELECT * FROM categories
+
+Query getAllCategories = entityManager.createQuery("SELECT cat FROM Category cat");
+
+        // Buradaki Category, Proje içersinde table ile bağlantısını kurduğumuz Class ismi, devamındaki cat de alias
+
+List<Category> categoryList = getAllCategories.getResultList();
+
+        // Unchecked assignment: 'java.util.List' to 'java.util.List<Category>'
+        // Yani der ki, sen result olarak Category class'ının bir listesini istiyorsun,
+        // fakat ben bu query'nin geriye Category döndürüp döndürmediğini bilemiyorum diyor.
+
+        // Bunun önüne geçmek için TypedQuery kullanıyoruz
+        // Çünkü TypedQuery, generic yapılardır ve <> içinde belirttiğin nesne üzerinden dönüş yapar
+        // ve Query'ye ilave olarak ikinci parametrede dönen result class'ı belirtmeye olanak tanır
+
+TypedQuery<Category> getAllCategories = entityManager.createQuery("SELECT cat FROM Category cat",Category.class);
+List<Category> categoryList = getAllCategories.getResultList();
+
+        for (Category category : categoryList){
+            System.out.println(category.getName());
+        }
+
+
+
+
+
+
+
+// SELECT * FROM categories WHERE category_id=1;
+
+        TypedQuery<Category> getAllCategories = entityManager.createQuery("SELECT cat FROM Category cat WHERE cat.id=1",Category.class);
+
+// id parametresini dışarıdan almak istersem (mesela scanner ile kullanıcıdan)
+
+        TypedQuery<Category> getAllCategories = entityManager.createQuery("SELECT cat FROM Category cat WHERE cat.id=?1",Category.class);
+        getAllCategories.setParameter(1,3);
+
+// (Tercih edilen) veya integer ile parametrenin Query içersindeki yerini belirtmek yerine bu şekilde daha katı bir şekilde belirt
+
+        TypedQuery<Category> getAllCategories = entityManager.createQuery("SELECT cat FROM Category cat WHERE cat.id=:id",Category.class);
+        getAllCategories.setParameter("id",3);
+
+
+        List<Category> categoryList = getAllCategories.getResultList();
+
+        for (Category category : categoryList){
+            System.out.println(category.getName());
+        }
+
+// Result olarak bir liste yerine tek bir sonuç almak istersek (örneğin yukarıda tek bir id belirttiğimiz gibi)
+
+        TypedQuery<Category> getAllCategories = entityManager.createQuery("SELECT cat FROM Category cat WHERE cat.id=:id",Category.class);
+        getAllCategories.setParameter("id",3);
+
+        Category category = getAllCategories.getSingleResult();
+        System.out.println(category.getName());
+
+
+
+
+
+
+// SELECT * FROM products WHERE price<10
+
+        TypedQuery<Product> prodQuery = entityManager.createQuery("SELECT p FROM Product p WHERE p.price<10",Product.class);
+        List<Product> productList = prodQuery.getResultList();
+        System.out.println(productList.toString());
+
+
+
+
+
+
+// SELECT name FROM products WHERE price<10
+
+        TypedQuery<Product> prodQuery = entityManager.createQuery("SELECT p.name FROM Product p WHERE p.price<10",Product.class);
+        List<Product> productList = prodQuery.getResultList();
+
+        for (Product product : productList){
+            System.out.println(product.getName());
+        }
+
+        // for döngüsü burada hata verecek
+        // çünkü TypedQuery Product obje listesi dönüyor ve for döngüsü içeride kendisini Product'a eşlemeye çalışıyor
+        // fakat bu doğru değil çünkü Product'un isim dışında başka değerleri gelmiyor
+        // Bu nedenle eğer tek bir veri çekiyor isek, gelecek verinin veri tipini girmemiz gerekli
+
+        TypedQuery<String> prodQuery = entityManager.createQuery("SELECT p.name FROM Product p WHERE p.price<10",String.class);
+        List<String> productNameList = prodQuery.getResultList();
+
+        for (String str : productNameList){
+            System.out.println(str);
+        }
+
+// Custom array sonuç döndürmek için
+        TypedQuery<Object[]> prodQuery = entityManager.createQuery("SELECT p.name,p.name,p.price FROM Product p WHERE p.price<10",Object.class);
+        List<Object[]> productCustomList = prodQuery.getResultList();
+
+        for (Object[] obj : productCustomList){
+            System.out.println("ID: " + obj[0]);
+            System.out.println("Name: " + obj[1]);
+            System.out.println("Price: " + obj[2]);
+        }
+
+
+
+
+
+
+// DTO - Data Transfer Object - Veritabanında karşılığı olmayan bir sınıfa data import etmek
+        TypedQuery<CheapProduct> prodQuery = entityManager.createQuery("SELECT NEW CheapProduct(p.id,p.name,p.price) FROM Product p WHERE p.price<10",CheapProduct.class);
+        List<CheapProduct> cheapProductList = prodQuery.getResultList();
+
+        for (CheapProduct cheapProduct : cheapProductList){
+            System.out.println(cheapProduct.toString());
+        }
+
+
+
+
+
+// SELECT Count(category_id) as cat_count FROM categories
+        TypedQuery<Long> customQuery = entityManager.createQuery("SELECT COUNT(p.id) FROM Product p",Long.class);
+        Long prodCount = customQuery.getSingleResult();
+        System.out.println(prodCount);
+
+
+
+
+// SELECT Count(category_id) as cat_count FROM categories
+        TypedQuery<Object[]> customQuery = entityManager.createQuery("SELECT MAX(p.price) FROM Product p",Object[].class);
+        Object[] prodCount = customQuery.getSingleResult();
+        System.out.println(prodCount[0]);
