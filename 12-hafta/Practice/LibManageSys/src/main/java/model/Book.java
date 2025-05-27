@@ -27,4 +27,7 @@ public class Book {
     @Column
     private Integer stock;
 
+    @OneToMany(mappedBy = Author)
+    private Author author;
+
 }

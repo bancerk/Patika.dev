@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2c139c4-7bd3-4eb1-9ce7-e67f066d4316" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Author.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/BookBorrowing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Publisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Project_Description.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/dataSources/9c49e30e-8f5a-42c0-a84c-d20cb48c72b2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/dataSources/9c49e30e-8f5a-42c0-a84c-d20cb48c72b2/storage_v2/_src_/database/week12librarymanagementsystem.ONqIaw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/dataSources/9c49e30e-8f5a-42c0-a84c-d20cb48c72b2/storage_v2/_src_/database/week12librarymanagementsystem.ONqIaw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/dataSources/9c49e30e-8f5a-42c0-a84c-d20cb48c72b2/storage_v2/_src_/database/week12librarymanagementsystem.ONqIaw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/dataSources/9c49e30e-8f5a-42c0-a84c-d20cb48c72b2/storage_v2/_src_/database/week12librarymanagementsystem.ONqIaw/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LibraryManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LibraryManagementSystem/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+    <list default="true" id="d2c139c4-7bd3-4eb1-9ce7-e67f066d4316" name="Changes" comment="created basic entities">
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Book.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,11 +105,24 @@
       <workItem from="1748280286880" duration="1981000" />
       <workItem from="1748336269008" duration="1144000" />
       <workItem from="1748374834852" duration="403000" />
-      <workItem from="1748375277270" duration="1525000" />
+      <workItem from="1748375277270" duration="1857000" />
     </task>
+    <task id="LOCAL-00001" summary="created basic entities">
+      <option name="closed" value="true" />
+      <created>1748376835707</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748376835707</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created basic entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="created basic entities" />
   </component>
 </project>
