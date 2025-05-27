@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -32,4 +34,8 @@ public class BookBorrowing {
     public void prePersist() {
         this.returnDate = Date.valueOf(LocalDate.now()); // convert java.time.LocalDate to java.sql.Date for db compat
     }
+
+    @OneToMany
+    @JoinColumn(name = "borrowed_books")
+    private List<Book> bookList = new ArrayList<>();
 }

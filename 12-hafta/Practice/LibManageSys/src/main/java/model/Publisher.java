@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -26,5 +28,9 @@ public class Publisher {
 
     @Column
     private String address;
+
+    @OneToMany
+    @JoinColumn(name = "publisher_name")
+    private List<Book> bookList = new ArrayList<>();
 
 }

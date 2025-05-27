@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -27,7 +29,7 @@ public class Book {
     @Column
     private Integer stock;
 
-    @OneToMany(mappedBy = Author)
-    private Author author;
+    @ManyToMany(mappedBy = "bookList")
+    private List<Category> categoryList = new ArrayList<>();
 
 }
