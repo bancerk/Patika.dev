@@ -18,6 +18,7 @@ public class Publisher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "publisher_id")
     private Long id;
 
     @Column(nullable = false)
@@ -29,8 +30,7 @@ public class Publisher {
     @Column
     private String address;
 
-    @OneToMany
-    @JoinColumn(name = "publisher_name")
+    @OneToMany(mappedBy = "publisher", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Book> bookList = new ArrayList<>();
 
 }

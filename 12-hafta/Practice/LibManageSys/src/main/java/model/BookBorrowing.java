@@ -19,6 +19,7 @@ public class BookBorrowing {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "borrowing_id")
     private Long id;
 
     @Column
@@ -32,10 +33,11 @@ public class BookBorrowing {
 
     @PrePersist
     public void prePersist() {
-        this.returnDate = Date.valueOf(LocalDate.now()); // convert java.time.LocalDate to java.sql.Date for db compat
+        this.borrowingDate = Date.valueOf(LocalDate.now());
+        // convert java.time.LocalDate to java.sql.Date for db compatibility
     }
 
-    @OneToMany
-    @JoinColumn(name = "borrowed_books")
+    @OneToMany(mappedBy = "borrowing", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Book> bookList = new ArrayList<>();
+
 }

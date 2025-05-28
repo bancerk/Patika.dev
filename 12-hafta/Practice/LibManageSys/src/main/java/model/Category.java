@@ -17,6 +17,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "category_id")
     private Long id;
 
     @Column(nullable = false)
@@ -25,10 +26,11 @@ public class Category {
     @Column
     private String description;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinTable(
-            joinColumns = @JoinColumn(name = "category_id"),
-            inverseJoinColumns = @JoinColumn(name = "book_id")
+            joinColumns = @JoinColumn(name = "category_book_id"),
+            inverseJoinColumns = @JoinColumn(name = "book_category_id")
     )
-    private final List<Book> bookList = new ArrayList<>();
+    private List<Book> bookList = new ArrayList<>();
 }

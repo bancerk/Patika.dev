@@ -18,6 +18,7 @@ public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "author_id")
     private Long id;
 
     @Column(nullable = false)
@@ -29,8 +30,9 @@ public class Author {
     @Column
     private String country;
 
-    @OneToMany
-    @JoinColumn(name = "author_name")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Book> bookList = new ArrayList<>();
+
+
 
 }

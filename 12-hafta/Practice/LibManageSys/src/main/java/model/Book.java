@@ -18,9 +18,10 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "book_id")
     private Long id;
 
-    @Column(name = "book_title",nullable = false)
+    @Column(name = "book_title", nullable = false)
     private String name;
 
     @Column
@@ -29,7 +30,21 @@ public class Book {
     @Column
     private Integer stock;
 
-    @ManyToMany(mappedBy = "bookList")
+    @ManyToMany(mappedBy = "bookList",
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private List<Category> categoryList = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_id")
+    private Author author;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "publisher_id")
+    private Publisher publisher;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "borrowing_id")
+    private BookBorrowing borrowing;
+
 
 }
