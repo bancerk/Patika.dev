@@ -194,6 +194,23 @@ public class Main {
             session.persist(book4);
             session.persist(book5);
 
+
+            // Borrowing test
+            BookBorrowing borrowing1 = new BookBorrowing();
+            borrowing1.setBorrowerName("Alice Johnson");
+            borrowing1.setBorrowingDate(Date.valueOf("2025-05-29"));
+
+            // Assume book1 and book2 already exist and were persisted above
+            borrowing1.getBookList().add(book1);
+            borrowing1.getBookList().add(book2);
+
+            // Set the relationship on the Book side
+            book1.setBorrowing(borrowing1);
+            book2.setBorrowing(borrowing1);
+
+            session.persist(borrowing1);
+
+
             session.getTransaction().commit();
 
         } catch (Exception e) {

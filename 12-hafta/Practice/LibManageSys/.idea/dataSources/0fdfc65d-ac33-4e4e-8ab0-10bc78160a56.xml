@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>1267</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
+      <IntrospectionStateNumber>1368</IntrospectionStateNumber>
       <ServerVersion>16.9</ServerVersion>
-      <StartupTime>1748421754</StartupTime>
+      <StartupTime>1748508834</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -801,7 +809,7 @@ false Zulu
 14744||10|C|G
 14744||-9223372036854775808|U|G
 14744||10|U|G</Grants>
-      <IntrospectionStateNumber>1267</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1368</IntrospectionStateNumber>
       <ObjectId>17745</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4225,91 +4233,91 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1267</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-05-28.13:51:07</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1368</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-05-29.09:06:46</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>523</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <sequence id="265" parent="264" name="authors_author_id_seq">
-      <ObjectId>18050</ObjectId>
+      <ObjectId>18308</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1251</StateNumber>
+      <StateNumber>1356</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="266" parent="264" name="book_borrowing_borrowing_id_seq">
-      <ObjectId>18058</ObjectId>
+      <ObjectId>18316</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1252</StateNumber>
+      <StateNumber>1357</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="267" parent="264" name="books_book_id_seq">
-      <ObjectId>18064</ObjectId>
+      <ObjectId>18322</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="268" parent="264" name="categories_category_id_seq">
-      <ObjectId>18070</ObjectId>
+      <ObjectId>18328</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1254</StateNumber>
+      <StateNumber>1359</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="269" parent="264" name="publisher_publisher_id_seq">
-      <ObjectId>18081</ObjectId>
+      <ObjectId>18339</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1256</StateNumber>
+      <StateNumber>1361</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="270" parent="264" name="authors">
-      <ObjectId>18051</ObjectId>
-      <StateNumber>1257</StateNumber>
+      <ObjectId>18309</ObjectId>
+      <StateNumber>1362</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="271" parent="264" name="book_borrowing">
-      <ObjectId>18059</ObjectId>
-      <StateNumber>1258</StateNumber>
+      <ObjectId>18317</ObjectId>
+      <StateNumber>1363</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="272" parent="264" name="books">
-      <ObjectId>18065</ObjectId>
-      <StateNumber>1257</StateNumber>
+      <ObjectId>18323</ObjectId>
+      <StateNumber>1362</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="273" parent="264" name="categories">
-      <ObjectId>18071</ObjectId>
-      <StateNumber>1261</StateNumber>
+      <ObjectId>18329</ObjectId>
+      <StateNumber>1366</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="274" parent="264" name="categories_books">
-      <ObjectId>18078</ObjectId>
-      <StateNumber>1260</StateNumber>
+      <ObjectId>18336</ObjectId>
+      <StateNumber>1365</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="275" parent="264" name="publisher">
-      <ObjectId>18082</ObjectId>
-      <StateNumber>1259</StateNumber>
+      <ObjectId>18340</ObjectId>
+      <StateNumber>1364</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="276" parent="270" name="birthdate">
       <Position>1</Position>
-      <StateNumber>1251</StateNumber>
+      <StateNumber>1356</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
@@ -4317,49 +4325,49 @@ false Zulu
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1251</StateNumber>
+      <StateNumber>1356</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>18050</SequenceId>
+      <SequenceId>18308</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="278" parent="270" name="country">
       <Position>3</Position>
-      <StateNumber>1251</StateNumber>
+      <StateNumber>1356</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="279" parent="270" name="name">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1251</StateNumber>
+      <StateNumber>1356</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="280" parent="270" name="authors_pkey">
       <ColNames>author_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18056</ObjectId>
+      <ObjectId>18314</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1251</StateNumber>
+      <StateNumber>1356</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="281" parent="270" name="authors_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18057</ObjectId>
+      <ObjectId>18315</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1251</StateNumber>
-      <UnderlyingIndexId>18056</UnderlyingIndexId>
+      <StateNumber>1356</StateNumber>
+      <UnderlyingIndexId>18314</UnderlyingIndexId>
     </key>
     <column id="282" parent="271" name="borrowingdate">
       <Position>1</Position>
-      <StateNumber>1252</StateNumber>
+      <StateNumber>1357</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
     <column id="283" parent="271" name="returndate">
       <Position>2</Position>
-      <StateNumber>1252</StateNumber>
+      <StateNumber>1357</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
@@ -4367,48 +4375,48 @@ false Zulu
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1252</StateNumber>
+      <StateNumber>1357</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>18058</SequenceId>
+      <SequenceId>18316</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="285" parent="271" name="borrowername">
       <Position>4</Position>
-      <StateNumber>1252</StateNumber>
+      <StateNumber>1357</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="286" parent="271" name="book_borrowing_pkey">
       <ColNames>borrowing_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18062</ObjectId>
+      <ObjectId>18320</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1252</StateNumber>
+      <StateNumber>1357</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="287" parent="271" name="book_borrowing_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18063</ObjectId>
+      <ObjectId>18321</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1252</StateNumber>
-      <UnderlyingIndexId>18062</UnderlyingIndexId>
+      <StateNumber>1357</StateNumber>
+      <UnderlyingIndexId>18320</UnderlyingIndexId>
     </key>
     <column id="288" parent="272" name="publicationyear">
       <Position>1</Position>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
     <column id="289" parent="272" name="stock">
       <Position>2</Position>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="290" parent="272" name="author_id">
       <Position>3</Position>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
@@ -4416,136 +4424,136 @@ false Zulu
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>18064</SequenceId>
+      <SequenceId>18322</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="292" parent="272" name="borrowing_id">
       <Position>5</Position>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
     <column id="293" parent="272" name="publisher_id">
       <Position>6</Position>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
     <column id="294" parent="272" name="book_title">
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <foreign-key id="295" parent="272" name="fkfjixh2vym2cvfj3ufxj91jem7">
       <ColNames>author_id</ColNames>
-      <ObjectId>18089</ObjectId>
-      <StateNumber>1257</StateNumber>
+      <ObjectId>18347</ObjectId>
+      <StateNumber>1362</StateNumber>
       <RefKeyColPositions>2</RefKeyColPositions>
-      <RefTableId>18051</RefTableId>
+      <RefTableId>18309</RefTableId>
     </foreign-key>
     <foreign-key id="296" parent="272" name="fks7ktgkbt2rhgtealt32bpvxc">
       <ColNames>borrowing_id</ColNames>
-      <ObjectId>18094</ObjectId>
-      <StateNumber>1258</StateNumber>
+      <ObjectId>18352</ObjectId>
+      <StateNumber>1363</StateNumber>
       <RefKeyColPositions>3</RefKeyColPositions>
-      <RefTableId>18059</RefTableId>
+      <RefTableId>18317</RefTableId>
     </foreign-key>
     <foreign-key id="297" parent="272" name="fk1eujqvebj0cej9mcivv49grwi">
       <ColNames>publisher_id</ColNames>
-      <ObjectId>18099</ObjectId>
-      <StateNumber>1259</StateNumber>
+      <ObjectId>18357</ObjectId>
+      <StateNumber>1364</StateNumber>
       <RefKeyColPositions>2</RefKeyColPositions>
-      <RefTableId>18082</RefTableId>
+      <RefTableId>18340</RefTableId>
     </foreign-key>
     <index id="298" parent="272" name="books_pkey">
       <ColNames>book_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18068</ObjectId>
+      <ObjectId>18326</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1253</StateNumber>
+      <StateNumber>1358</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="299" parent="272" name="books_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18069</ObjectId>
+      <ObjectId>18327</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1253</StateNumber>
-      <UnderlyingIndexId>18068</UnderlyingIndexId>
+      <StateNumber>1358</StateNumber>
+      <UnderlyingIndexId>18326</UnderlyingIndexId>
     </key>
     <column id="300" parent="273" name="category_id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1254</StateNumber>
+      <StateNumber>1359</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>18070</SequenceId>
+      <SequenceId>18328</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="301" parent="273" name="description">
       <Position>2</Position>
-      <StateNumber>1254</StateNumber>
+      <StateNumber>1359</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="302" parent="273" name="name">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1254</StateNumber>
+      <StateNumber>1359</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="303" parent="273" name="categories_pkey">
       <ColNames>category_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18076</ObjectId>
+      <ObjectId>18334</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1254</StateNumber>
+      <StateNumber>1359</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="304" parent="273" name="categories_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18077</ObjectId>
+      <ObjectId>18335</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1254</StateNumber>
-      <UnderlyingIndexId>18076</UnderlyingIndexId>
+      <StateNumber>1359</StateNumber>
+      <UnderlyingIndexId>18334</UnderlyingIndexId>
     </key>
-    <column id="305" parent="274" name="book_id">
+    <column id="305" parent="274" name="book_category_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1255</StateNumber>
+      <StateNumber>1360</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="306" parent="274" name="category_id">
+    <column id="306" parent="274" name="category_book_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1255</StateNumber>
+      <StateNumber>1360</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="307" parent="274" name="fk71x7rxtv0n9a065npeeophl4c">
-      <ColNames>book_id</ColNames>
-      <ObjectId>18104</ObjectId>
-      <StateNumber>1260</StateNumber>
+    <foreign-key id="307" parent="274" name="fknyjmi4urenbna3bp3donvx3i8">
+      <ColNames>book_category_id</ColNames>
+      <ObjectId>18362</ObjectId>
+      <StateNumber>1365</StateNumber>
       <RefKeyColPositions>4</RefKeyColPositions>
-      <RefTableId>18065</RefTableId>
+      <RefTableId>18323</RefTableId>
     </foreign-key>
-    <foreign-key id="308" parent="274" name="fkm1fggvp6bipt6gcd8e60b3cje">
-      <ColNames>category_id</ColNames>
-      <ObjectId>18109</ObjectId>
-      <StateNumber>1261</StateNumber>
+    <foreign-key id="308" parent="274" name="fkmm8sjgdp9cqij8uf0ydxijx7j">
+      <ColNames>category_book_id</ColNames>
+      <ObjectId>18367</ObjectId>
+      <StateNumber>1366</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>18071</RefTableId>
+      <RefTableId>18329</RefTableId>
     </foreign-key>
     <column id="309" parent="275" name="establishmentyear">
       <Position>1</Position>
-      <StateNumber>1256</StateNumber>
+      <StateNumber>1361</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
@@ -4553,39 +4561,39 @@ false Zulu
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1256</StateNumber>
+      <StateNumber>1361</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>18081</SequenceId>
+      <SequenceId>18339</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="311" parent="275" name="address">
       <Position>3</Position>
-      <StateNumber>1256</StateNumber>
+      <StateNumber>1361</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="312" parent="275" name="name">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1256</StateNumber>
+      <StateNumber>1361</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="313" parent="275" name="publisher_pkey">
       <ColNames>publisher_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18087</ObjectId>
+      <ObjectId>18345</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1256</StateNumber>
+      <StateNumber>1361</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="314" parent="275" name="publisher_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18088</ObjectId>
+      <ObjectId>18346</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1256</StateNumber>
-      <UnderlyingIndexId>18087</UnderlyingIndexId>
+      <StateNumber>1361</StateNumber>
+      <UnderlyingIndexId>18345</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
