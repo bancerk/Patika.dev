@@ -1,0 +1,36 @@
+//CREATE
+        Customer customer = new Customer();
+        customer.setName("Spring Dersleri");
+        customer.setMail("info@patika.dev");
+        customer.setGender(Customer.GENDER.MALE);
+        customer.setOnDate(LocalDate.now());
+
+        customerManager.save(customer);
+
+
+
+
+//READ
+        Customer firstCustomer = customerManager.findById(1);
+        System.out.println("firstCustomer = " + firstCustomer.toString());
+
+
+
+
+//DELETE
+        customerManager.deleteById(2);
+
+
+
+
+//UPDATE
+        Customer customer = customerManager.findById(1);
+        customer.setMail("test@patika.dev");
+        customer.setName("Update test");
+        customerManager.update(customer);
+
+
+
+//FIND ALL
+        List<Customer> customerList = customerManager.findAll();
+        System.out.println("customerList = " + customerList.toString());

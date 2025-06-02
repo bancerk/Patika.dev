@@ -1,0 +1,9 @@
+<archetype>
+  <id>MiniProjectLayeredArchitecture</id>
+  <sources>
+    <source>src/main/java/view.App.java</source>
+  </sources>
+  <testSources>
+    <source>src/test/java/AppTest.java</source>
+  </testSources>
+</archetype>
