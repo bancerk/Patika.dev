@@ -1,5 +1,7 @@
-package dev.patika.spring;
+package dev.patika.spring.api;
 
+import dev.patika.spring.entities.Customer;
+import dev.patika.spring.dao.CustomerRepo;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

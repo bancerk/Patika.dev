@@ -1,4 +1,4 @@
-package dev.patika.spring;
+package dev.patika.spring.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
