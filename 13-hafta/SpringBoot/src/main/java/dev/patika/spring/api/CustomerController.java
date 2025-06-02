@@ -1,7 +1,9 @@
 package dev.patika.spring.api;
 
+import dev.patika.spring.business.abstracts.ICustomerService;
 import dev.patika.spring.entities.Customer;
 import dev.patika.spring.dao.CustomerRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,11 +12,27 @@ import java.util.List;
 @RequestMapping("/customer")
 public class CustomerController {
 
+    // Dependency Injection - IOC
+    // Constructor
     private final CustomerRepo customerRepo;
 
     public CustomerController(CustomerRepo customerRepo) {
         this.customerRepo = customerRepo;
     }
+
+    //Alternative - Setter
+    /*
+    @Autowired
+    private ICustomerService(ICustomerService customerService){
+        this.customerService = customerService;
+    }
+    */
+
+    //Alternative 2 - Field
+    /*
+    @Autowired
+    private ICustomerService customerService;
+    */
 
     @GetMapping
     public Customer findById(@PathVariable("id") int id) {
