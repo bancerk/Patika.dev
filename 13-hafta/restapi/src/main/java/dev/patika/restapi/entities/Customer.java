@@ -1,15 +1,17 @@
 package dev.patika.restapi.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "customers")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
     @Id
@@ -23,9 +25,9 @@ public class Customer {
     @Column(name = "customer_mail", unique = true, nullable = false)
     private String mail;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "customer_on_date")
     private LocalDate onDate;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "customer_gender")
     private GENDER gender;

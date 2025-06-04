@@ -1,5 +1,6 @@
-package dev.patika.restapi.business.abstracts;
+package dev.patika.restapi.business.concretes;
 
+import dev.patika.restapi.business.abstracts.ICustomerService;
 import dev.patika.restapi.dao.CustomerRepo;
 import dev.patika.restapi.entities.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
