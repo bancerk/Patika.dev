@@ -1,6 +1,8 @@
 package dev.patika.restapi.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,9 +22,11 @@ public class Customer {
     private int id; //customer_id
 
     @Column(name = "customer_name", length = 100, nullable = false)
+    @NotNull
     private String name; //customer_name
 
     @Column(name = "customer_mail", unique = true, nullable = false)
+    @Email(message = "lütfen geçerli bir email adresi giriniz") // spring boot starter validation paketi ile bu özelliği ekledik
     private String mail;
 
     @Column(name = "customer_on_date")
